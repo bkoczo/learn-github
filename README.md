@@ -1,2 +1,1 @@
-# learn-github
-Learning Github with this test repository.
+# 100_vanillajs_projects
