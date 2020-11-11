@@ -1,0 +1,41 @@
+******************
+** Git & Github **
+******************
+
+/E/Web_Dev/my_tutorials/learn-github
+
+Github with Brackets
+http://rickluna.com/wp/2016/03/brackets-git-integration/
+
+Git commands:
+
+git clone <giturl>     -- import project to local from github
+git status     -- status of files (new/modified/not)
+git add *|filename      -- cadds a change in the working directory to the staging area. It tells Git that you want to include updates to a particular file in the next commit
+git reset filename   --undo staging, adding
+git commit -m "title" -m "descriptionbox"    --commits the changes to github, with a title and description of changes
+git commit -am "newmodif"   --commit modified files, not working when the file is newly created
+git reset HEAD~1   --undo last commit
+git reset --hard <hash>   --completetly remove changes until this hash
+git log   --logs last changes n stuff
+-----------
+SSH:
+ssh-keygen -t rsa -b 4096 -C "koczobence@gmail.com"    -- ssh connect local to github  (/c/Users/Koczó Bence/.ssh/id_rsa)
+eval "$(ssh-agent -s)"    --start ssh agent in background
+ssh-add "/c/Users/Koczó Bence/.ssh/id_rsa"   --add my ssh key to the ssh agent
+------------
+
+git remote add origin git@github.com:bkoczo/demo-repo.git    --adds a remote (on github) repository on local
+git remote -v     --view current remotes
+git remote rm destination/origin     --remove destination/ or origin if replaced with origin
+git push -u origin master    --pushes all local stuff to github. if -u is present in command, from now on, git push is enough. -u remembers origin master
+
+
+Branching:
+git branch  -- shows available branches, starred branch I'm currently on 
+git checkout -b <branchname>   --create and switch to a new branch
+git checkout <branchname>  --switch to branch
+git branch -d <branchname>    --delete branch
+
+
+https://www.youtube.com/watch?v=RGOj5yH7evk&ab_channel=freeCodeCamp.org
